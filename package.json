@@ -50,7 +50,7 @@
     "react-fast-compare": "^2.0.1",
     "scheduler": "^0.17.0",
     "tiny-warning": "^1.0.2",
-    "tslib": "^1.10.0"
+    "tslib": "^1.11.1"
   },
   "optionalDependencies": {},
   "resolutions": {
