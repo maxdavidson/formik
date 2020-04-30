@@ -40,7 +40,9 @@
     "build-website": "cd website && yarn install && yarn build",
     "now-build": "npm run build-website",
     "gen-docs": "all-contributors generate && doctoc README.md",
-    "size": "size-limit"
+    "size": "size-limit",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "dependencies": {
     "deepmerge": "^2.1.1",
@@ -50,7 +52,8 @@
     "react-fast-compare": "^2.0.1",
     "scheduler": "^0.17.0",
     "tiny-warning": "^1.0.2",
-    "tslib": "^1.10.0"
+    "tslib": "^1.10.0",
+    "snyk": "^1.316.1"
   },
   "optionalDependencies": {},
   "resolutions": {
@@ -124,7 +127,8 @@
       "<rootDir>/test/setupTests.ts"
     ]
   },
-  "size-limit": [{
+  "size-limit": [
+    {
       "path": "./dist/index.js",
       "limit": "14 kB"
     },
@@ -136,5 +140,6 @@
       "path": "./dist/formik.umd.production.js",
       "limit": "14 kB"
     }
-  ]
+  ],
+  "snyk": true
 }
